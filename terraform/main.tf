@@ -4,7 +4,7 @@ data "aws_vpc" "default" {
 
 resource "aws_instance" "web" {
   ami                    = var.ubuntu_24_04_ami
-  instance_type          = "t3.micro"
+  instance_type          = "t3.small"
   key_name               = aws_key_pair.default.key_name
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 }

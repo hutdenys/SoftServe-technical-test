@@ -1,0 +1,14 @@
+[Unit]
+Description=Eschool service
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/eSchool
+ExecStart=/usr/bin/java -jar /home/ubuntu/eSchool/target/eschool.jar
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+
